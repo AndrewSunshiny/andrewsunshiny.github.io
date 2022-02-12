@@ -1,0 +1,9 @@
+mixin skillsBlock({ skill, title, imgSrc, text, isParent})
+	a.skills__block(data-skill-parent=parent ? parent : null, data-skill=skill)&attributes(attributes)
+		if imgSrc
+			.skills__block-img
+				img(src=imgSrc, alt=title)
+		h3.subtitle.subtitle_fz14.skills__block-subtitle= title
+		p.skills__block-text= text
+		if isParent
+			.skills__block-lines

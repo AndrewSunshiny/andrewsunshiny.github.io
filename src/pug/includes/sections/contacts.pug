@@ -1,0 +1,32 @@
+include ../elements/titles
+include ../elements/social
+
+section.contacts.section(data-anchor='contacts')
+	.container
+		.contacts__wrapper
+			.contacts__photo
+				img(src='/assets/img/main_photo.jpg', alt='photo')
+			.contacts__main
+				+subtitleCircled("Contacts", "h2").contacts__subtitle.subtitle_left
+				.contacts__title.title.title_left Contact me
+				.subtitle.subtitle_fz14 In any way convenient for you:
+				+social.contacts__social
+
+				.subtitle.subtitle_fz14 Or leave your details and I will contact to you myself:
+
+				form.contacts__form(action='#')
+					.contacts__form-input
+						label(for='name') Your name;
+						input#name(name='name', type='text')
+					.contacts__form-input
+						label(for='email') Your email
+						input#email(name='email', type='text')
+					.contacts__form-textarea
+						label(for='text') Your message
+						textarea#text(name='text', type='text')
+					.contacts__form-triggers
+						button.btn.contacts__form-btn Send
+						.contacts__form-policy
+							input.contacts__form-checkbox(name='policy', type='checkbox')
+							span.
+								I'm agree with #[a(href='/policy.html') privacy policy]

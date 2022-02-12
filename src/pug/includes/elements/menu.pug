@@ -1,0 +1,14 @@
+include ./social
+
+.menu
+	.menu__block
+		nav
+			ul#Menu.menu__list
+				li.menu__item(data-menuanchor='about'): a(href='#about') about me
+				//- li.menu__item(data-menuanchor="resume"): a(href="#resume") мой опыт
+				li.menu__item(data-menuanchor='skills'): a(href='#skills') my skills
+				li.menu__item(data-menuanchor='portfolio'): a(href='#portfolio') my works
+				//- li.menu__item(data-menuanchor="prices"): a(href="#prices") прайс-лист
+				li.menu__item(data-menuanchor='contacts'): a(href='#contacts') contacts
+		+social.menu__social
+	.menu__overlay

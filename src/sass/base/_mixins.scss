@@ -1,0 +1,44 @@
+@mixin before_circle {
+	&::before {
+		content: '';
+		position: absolute;
+		width: 40px;
+		height: 40px;
+		border-radius: 100%;
+		background-color: $main-color;
+		z-index: 0;
+	}
+}
+@mixin before_circle_36 {
+	@include before_circle;
+	&::before {
+		width: 36px;
+		height: 36px;
+	}
+}
+@mixin before_circle_small {
+	@include before_circle;
+	&::before {
+		width: 15px;
+		height: 15px;
+	}
+}
+.divider {
+	content: '';
+	width: 60px;
+	height: 3px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: $main-color;
+}
+@mixin underline {
+	&::after {
+		content: '';
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: -28px;
+		margin: 0;
+		@extend .divider;
+	}
+}

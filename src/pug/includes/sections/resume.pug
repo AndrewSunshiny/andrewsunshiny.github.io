@@ -1,0 +1,24 @@
+mixin resumeColumn({title, items})
+	.resume__column
+		h3.subtitle.subtitle_fz20.resume__column-subtitle= title
+		ul
+			each item in items
+				+resumeItem({...item})
+
+mixin resumeItem({imgSrc, imgAlt, title, location, text})
+	li: .resume__item
+		.resume__item-head
+			.resume__item-icon
+				img(src=imgSrc, alt=imgAlt)
+			h4.subtitle.subtitle_fz14= title
+			.resume__item-location= location
+		.resume__item-body= text
+
+section.resume.section(data-anchor='about')
+	.container
+		h2.subtitle.resume__subtitle(data-text='Опыт') Опыт
+		.title.resume__title Чем я буду полезен
+		.resume__wrapper
+			each column in resume.columns
+				- const { title, items } = column;
+				+resumeColumn({title, items})

@@ -1,0 +1,15 @@
+@media (max-width: 992px) {
+	.promo {
+		&__title {
+			width: 300px;
+			font-size: 30px;
+		}
+	}
+}
+@media (max-width: 576px) {
+	.promo {
+		&__title {
+			margin-bottom: 28px;
+		}
+	}
+}

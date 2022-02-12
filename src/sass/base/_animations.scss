@@ -1,0 +1,104 @@
+@media (min-width: 993px) {
+	@keyframes hamburger-swap {
+		from {
+			left: 32px;
+		}
+		// from {
+		// 	right: 24px;
+		// }
+		// 40% {
+		// 	right: -100px;
+		// }
+		// 40% {
+		// 	left: -36px;
+		// }
+		to {
+			left: 290px;
+		}
+	}
+	@keyframes hamburger-swap-back {
+		from {
+			left: 290px;
+		}
+		// 80% {
+		// 	left: -400px;
+		// }
+		// 80% {
+		// 	right: -36px;
+		// }
+		// to {
+		// 	right: 24px;
+		// }
+		to {
+			left: 32px;
+		}
+	}
+}
+@media (max-width: 992px) {
+	@keyframes hamburger-swap {
+		from {
+			right: 24px;
+		}
+		40% {
+			right: -100px;
+		}
+		40% {
+			left: -36px;
+		}
+		to {
+			left: 290px;
+		}
+	}
+	@keyframes hamburger-swap-back {
+		from {
+			left: 290px;
+		}
+		80% {
+			left: -400px;
+		}
+		80% {
+			right: -36px;
+		}
+		to {
+			right: 24px;
+		}
+	}
+}
+@media (max-width: 768px) {
+	@keyframes hamburger-swap {
+		from {
+			right: 24px;
+		}
+		40% {
+			right: -100px;
+		}
+		40% {
+			left: -36px;
+		}
+		to {
+			left: 195px;
+		}
+	}
+	@keyframes hamburger-swap-back {
+		from {
+			left: 195px;
+		}
+		80% {
+			left: -400px;
+		}
+		80% {
+			right: -36px;
+		}
+		to {
+			right: 24px;
+		}
+	}
+}
+@keyframes skillDetail {
+	from {
+		top: 0;
+	}
+	to {
+		top: 500px;
+	}
+}

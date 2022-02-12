@@ -1,0 +1,129 @@
+.skills {
+	&__wrapper {
+		position: relative;
+		margin-left: auto;
+		margin-right: auto;
+
+		width: 100%;
+		min-height: 270px;
+	}
+	&__blocks {
+		top: 0;
+		left: 0;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, 270px);
+		grid-auto-rows: minmax(270px, auto);
+		justify-content: center;
+		gap: 20px;
+		width: 100%;
+		&:not([data-skills='main']) {
+			grid-template-areas: 'descr descr descr descr';
+		}
+		.invisible {
+			visibility: hidden;
+			grid-area: descr;
+		}
+	}
+	&__block {
+		display: block;
+		position: relative;
+		padding: 25px 30px;
+		border: 1px solid $text-color;
+		background-color: $background-color;
+		overflow: hidden;
+		&.active {
+			z-index: 200;
+		}
+		&[data-skill] {
+			cursor: pointer;
+		}
+		&.description {
+			grid-area: descr;
+			width: 560px;
+			margin: 0 auto;
+			padding-top: 25px;
+		}
+		&-img {
+			display: block;
+			height: 65px;
+			width: 65px;
+			margin-bottom: 16px;
+		}
+		&-subtitle {
+			margin: 0;
+		}
+		&-text {
+			margin-top: 15px;
+			margin-bottom: 0;
+			font-size: 12px;
+			line-height: 18px;
+		}
+		&-line {
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+			height: 3px;
+			width: 100px;
+			background-color: #fff;
+			bottom: 14px;
+			transition: 0.5s;
+			background-color: $text-color;
+		}
+		&.active &-line {
+			&_1 {
+				bottom: 22px;
+				width: 120px;
+			}
+			&_2 {
+				bottom: 10px;
+				width: 80px;
+			}
+		}
+	}
+	&__bars {
+		display: grid;
+		grid-template-columns: repeat(3, 350px);
+		grid-template-rows: repeat(2, 70px);
+		grid-auto-rows: minmax(70px, auto);
+		column-gap: 45px;
+		row-gap: 30px;
+		justify-content: center;
+		width: 100%;
+		margin: 120px auto 0;
+	}
+	&__bar {
+		&-head {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 100%;
+			height: 36px;
+			margin-bottom: 20px;
+		}
+		&-subtitle {
+			margin: 0;
+			font-size: 14px;
+		}
+		&-percentage {
+			font-size: 14px;
+			line-height: 21px;
+		}
+		&-line {
+			position: relative;
+			height: 14px;
+			background-color: $main-color;
+			border-radius: 4px;
+			&::before {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 350px;
+				height: 14px;
+				border-radius: 4px;
+				background-color: #e8e4de;
+				z-index: -1;
+			}
+		}
+	}
+}

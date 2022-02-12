@@ -1,0 +1,19 @@
+.promo {
+	min-height: 100vh;
+	position: relative;
+	// background: url("/assets/img/main_bg.png") no-repeat 50% / cover;
+	.container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		height: 100vh;
+	}
+	&__title {
+		width: 545px;
+	}
+	&__btns {
+		display: flex;
+		justify-content: space-between;
+		width: 280px;
+	}
+}

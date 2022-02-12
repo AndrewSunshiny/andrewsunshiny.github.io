@@ -1,0 +1,111 @@
+.contacts {
+	.container {
+		padding-bottom: 92px;
+	}
+	&__wrapper {
+		display: grid;
+		grid-template-columns: 400px 570px;
+		justify-content: space-between;
+	}
+	&__photo {
+		height: 600px;
+		width: 400px;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	&__main {
+		position: relative;
+	}
+	&__social {
+		margin-top: 24px;
+		margin-bottom: 20px;
+	}
+	&__form {
+		margin-top: 30px;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-auto-rows: auto;
+		grid-template-rows: 45px 190px;
+		column-gap: 10px;
+		row-gap: 28px;
+		justify-content: space-between;
+		&-input {
+			position: relative;
+			width: 100%;
+			height: 45px;
+			input {
+				display: block;
+				width: 100%;
+				height: 100%;
+				border: 1px solid $text-color;
+				padding: 14px 20px;
+				font-size: 12px;
+				line-height: 18px;
+				background-color: $background-color;
+				&.error {
+					border: 1px solid red;
+				}
+			}
+		}
+		&-textarea {
+			position: relative;
+			grid-column: 1 / 3;
+			textarea {
+				width: 100%;
+				height: 100%;
+				border: 1px solid $text-color;
+				padding: 14px 20px;
+				font-size: 12px;
+				line-height: 18px;
+				resize: none;
+				background-color: $background-color;
+			}
+		}
+		&-triggers {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			display: grid;
+			grid-template-columns: repeat(2, auto);
+			align-items: center;
+		}
+		&-btn {
+			margin-right: 35px;
+		}
+		&-policy {
+			position: relative;
+			span {
+				font-size: 12px;
+				line-height: 18px;
+			}
+			#policy-error {
+				left: 0;
+				top: -16px;
+
+				padding: 0;
+			}
+		}
+		&-checkbox {
+			position: relative;
+			left: -10px;
+		}
+		label {
+			position: absolute;
+			left: 12px;
+			top: 0;
+			transform: translateY(-50%);
+			padding: 0 8px;
+			font-size: 12px;
+			line-height: 18px;
+			color: $text-color;
+			background-color: $background-color;
+			z-index: 10;
+			&.error {
+				color: red;
+			}
+		}
+	}
+}

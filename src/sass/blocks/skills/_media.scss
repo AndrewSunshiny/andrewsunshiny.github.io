@@ -1,0 +1,134 @@
+@media (max-width: 1200px) {
+	.skills {
+		&__blocks {
+			&:not([data-skills='main']) {
+				grid-template-areas: 'descr descr descr';
+			}
+		}
+		&__block {
+			&.description {
+				grid-area: descr;
+				width: 560px;
+				margin-left: 290px;
+			}
+		}
+		&__bars {
+			grid-template-columns: repeat(2, 350px);
+		}
+	}
+}
+@media (max-width: 992px) {
+	.skills {
+		&__blocks {
+			&:not([data-skills='main']) {
+				padding-top: 290px;
+				grid-template-areas: '.';
+			}
+			.invisible {
+				display: none;
+			}
+		}
+		&__block {
+			&.description {
+				grid-column: 1 / 3;
+			}
+
+			&-img {
+				margin-left: auto;
+				margin-right: auto;
+			}
+			&-subtitle {
+				text-align: center;
+			}
+		}
+		&__bars {
+			grid-template-columns: repeat(2, 300px);
+			margin-top: 80px;
+		}
+		&__bar {
+			&-line {
+				&::before {
+					width: 300px;
+				}
+			}
+		}
+	}
+}
+@media (max-width: 768px) {
+	.skills {
+		&__blocks {
+			grid-template-columns: repeat(auto-fit, 170px);
+			grid-auto-rows: minmax(170px, auto);
+			grid-gap: 15px;
+		}
+		&__block {
+			position: relative;
+			padding: 20px;
+			transition-property: width, height;
+			overflow: hidden;
+			&:not(&.description)::after {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				width: 50px;
+				height: 20px;
+				transform: translateX(50%) rotate(-45deg);
+				transition: 0.5s;
+			}
+			&.active::after {
+				height: 0 !important;
+			}
+			&.description {
+				grid-column: 1 / 4;
+			}
+			&-subtitle {
+				text-align: center;
+			}
+			&:not(.description) &-text {
+				display: none;
+			}
+		}
+		&__bars {
+			grid-template-columns: 300px;
+		}
+	}
+}
+@media (max-width: 576px) {
+	.skills {
+		&__blocks {
+			gap: 20px;
+		}
+		&__block {
+			&.description {
+				grid-column: span 2;
+			}
+		}
+	}
+}
+@media (max-width: 410px) {
+	.skills {
+		&__blocks {
+			grid-template-columns: repeat(auto-fit, 100px);
+			grid-auto-rows: minmax(100px, auto);
+		}
+		&__block {
+			&-img {
+				width: 60px;
+				height: 60px;
+				margin-top: 0;
+				margin-bottom: 0;
+			}
+			&-subtitle {
+				display: none;
+			}
+		}
+	}
+}
+@media (max-width: 320px) {
+	.skills {
+		&__blocks {
+			gap: 15px;
+		}
+	}
+}

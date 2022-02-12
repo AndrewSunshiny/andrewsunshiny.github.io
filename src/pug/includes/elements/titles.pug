@@ -1,0 +1,8 @@
+mixin subtitleCircled(text, tag = "div")
+	case tag 
+		when "div"
+			.subtitle&attributes(attributes)= text
+				.subtitle-reverse= text
+		when "h2"
+			h2.subtitle&attributes(attributes)= text
+				.subtitle-reverse= text

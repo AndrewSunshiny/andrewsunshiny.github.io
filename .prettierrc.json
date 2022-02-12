@@ -1,0 +1,25 @@
+{
+	"arrowParens": "always",
+	"singleQuote": true,
+	"printWidth": 80,
+	"tabWidth": 2,
+	"useTabs": true,
+	"semicolon": true,
+	"trailingComma": "es5",
+	"bracketSpacing": true,
+	"bracketSameLine": false,
+	"proseWrap": "always",
+	"htmlWhitespaceSensitivity": "strict",
+	"overrides": [
+		{ "files": "*.js", "options": { "parser": "flow" } },
+		{
+			"files": "*.pug",
+			"options": {
+				"parser": "pug",
+				"printWidth": 80,
+				"pugPrintWidth": 80,
+				"pugWrapAttributesThreshold": 2
+			}
+		}
+	]
+}
